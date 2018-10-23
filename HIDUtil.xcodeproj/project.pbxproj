@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1A030621217D871C001F06D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A030620217D871C001F06D7 /* AppDelegate.swift */; };
-		1A030623217D871C001F06D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A030622217D871C001F06D7 /* ViewController.swift */; };
 		1A030625217D871D001F06D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A030624217D871D001F06D7 /* Assets.xcassets */; };
 		1A030628217D871D001F06D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A030626217D871D001F06D7 /* Main.storyboard */; };
+		1A030638217D96DA001F06D7 /* libSwiftyHID.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A030637217D96DA001F06D7 /* libSwiftyHID.dylib */; };
+		1A03064F217D97F3001F06D7 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A030648217D97F3001F06D7 /* Dynamic.swift */; };
+		1A030650217D97F3001F06D7 /* DeviceManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03064A217D97F3001F06D7 /* DeviceManagerViewController.swift */; };
+		1A030651217D97F3001F06D7 /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03064B217D97F3001F06D7 /* DeviceInfoViewController.swift */; };
+		1A030652217D97F3001F06D7 /* DeviceManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03064D217D97F3001F06D7 /* DeviceManagerViewModel.swift */; };
+		1A030653217D97F3001F06D7 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03064E217D97F3001F06D7 /* DeviceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A03061D217D871C001F06D7 /* HIDUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIDUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A030620217D871C001F06D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A030622217D871C001F06D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A030624217D871D001F06D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A030627217D871D001F06D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A030629217D871D001F06D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A03062A217D871D001F06D7 /* HIDUtil.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HIDUtil.entitlements; sourceTree = "<group>"; };
+		1A030637217D96DA001F06D7 /* libSwiftyHID.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libSwiftyHID.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A030648217D97F3001F06D7 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		1A03064A217D97F3001F06D7 /* DeviceManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManagerViewController.swift; sourceTree = "<group>"; };
+		1A03064B217D97F3001F06D7 /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
+		1A03064D217D97F3001F06D7 /* DeviceManagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManagerViewModel.swift; sourceTree = "<group>"; };
+		1A03064E217D97F3001F06D7 /* DeviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A030638217D96DA001F06D7 /* libSwiftyHID.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +50,7 @@
 			children = (
 				1A03061F217D871C001F06D7 /* HIDUtil */,
 				1A03061E217D871C001F06D7 /* Products */,
+				1A030636217D96DA001F06D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +65,50 @@
 		1A03061F217D871C001F06D7 /* HIDUtil */ = {
 			isa = PBXGroup;
 			children = (
+				1A030647217D97F3001F06D7 /* Utils */,
+				1A030649217D97F3001F06D7 /* ViewControllers */,
+				1A03064C217D97F3001F06D7 /* ViewModels */,
 				1A030620217D871C001F06D7 /* AppDelegate.swift */,
-				1A030622217D871C001F06D7 /* ViewController.swift */,
 				1A030624217D871D001F06D7 /* Assets.xcassets */,
 				1A030626217D871D001F06D7 /* Main.storyboard */,
 				1A030629217D871D001F06D7 /* Info.plist */,
 				1A03062A217D871D001F06D7 /* HIDUtil.entitlements */,
 			);
 			path = HIDUtil;
+			sourceTree = "<group>";
+		};
+		1A030636217D96DA001F06D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A030637217D96DA001F06D7 /* libSwiftyHID.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A030647217D97F3001F06D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1A030648217D97F3001F06D7 /* Dynamic.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1A030649217D97F3001F06D7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A03064A217D97F3001F06D7 /* DeviceManagerViewController.swift */,
+				1A03064B217D97F3001F06D7 /* DeviceInfoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A03064C217D97F3001F06D7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1A03064D217D97F3001F06D7 /* DeviceManagerViewModel.swift */,
+				1A03064E217D97F3001F06D7 /* DeviceViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +143,11 @@
 				TargetAttributes = {
 					1A03061C217D871C001F06D7 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -133,8 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A030623217D871C001F06D7 /* ViewController.swift in Sources */,
+				1A030653217D97F3001F06D7 /* DeviceViewModel.swift in Sources */,
+				1A030651217D97F3001F06D7 /* DeviceInfoViewController.swift in Sources */,
+				1A030650217D97F3001F06D7 /* DeviceManagerViewController.swift in Sources */,
 				1A030621217D871C001F06D7 /* AppDelegate.swift in Sources */,
+				1A03064F217D97F3001F06D7 /* Dynamic.swift in Sources */,
+				1A030652217D97F3001F06D7 /* DeviceManagerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
