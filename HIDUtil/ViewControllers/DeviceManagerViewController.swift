@@ -10,6 +10,10 @@ import Cocoa
 import IOKit
 import SwiftyHID
 
+protocol DeviceViewModelable {
+	var deviceViewModel: DeviceViewModel? { get set }
+}
+
 class DeviceManagerViewController: NSViewController {
 
 	@IBOutlet weak var deviceList: NSPopUpButton!
@@ -24,15 +28,30 @@ class DeviceManagerViewController: NSViewController {
 			}
 		}
 	}
-	var deviceInfoController: DeviceInfoViewController! {
-		return children.first(where: { vc in vc is DeviceInfoViewController }) as? DeviceInfoViewController
-	}
+	
+	var deviceViewModel: DeviceViewModel?
+	var tabs: [DeviceViewModelable] = []
+	var deviceReportDescriptorVC: DeviceReportDescriptorViewController?
+	var deviceReportsVC: DeviceReportsViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		deviceManager = DeviceManagerViewModel()
     }
+	
+	override func viewDidAppear() {
+		super.viewDidAppear()
+		
+		if let vc = children.first(where: { $0 is DeviceReportDescriptorViewController }) as? DeviceReportDescriptorViewController {
+			deviceReportDescriptorVC = vc
+			tabs.append(vc)
+		}
+		if let vc = children.first(where: { $0 is DeviceReportsViewController }) as? DeviceReportsViewController {
+			deviceReportsVC = vc
+			tabs.append(vc)
+		}
+	}
 
     override var representedObject: Any? {
         didSet {
@@ -43,13 +62,15 @@ class DeviceManagerViewController: NSViewController {
 	// MARK: View Callbacks
 	
 	@IBAction func deviceListDidChoose(_ sender: NSPopUpButton) {
-		// Don't re-set the device if not needed
-		guard let device = deviceManager?.devices.value[sender.indexOfSelectedItem],
-			device != deviceInfoController.deviceInfo?.device else {
-				return
+		guard let device = deviceManager?.devices.value[sender.indexOfSelectedItem] else {
+			return
 		}
 		
-		deviceInfoController.deviceInfo!.device = device
+		for tab in tabs {
+			if tab.deviceViewModel?.device != device {
+				tab.deviceViewModel?.device = device
+			}
+		}
 	}
 
 	// MARK: Custom View Methods
@@ -61,10 +82,16 @@ class DeviceManagerViewController: NSViewController {
 		}
 		deviceList.addItems(withTitles: titles)
 		
-		if let dev = devices.first, deviceInfoController.deviceInfo == nil {
-			deviceInfoController.deviceInfo = DeviceViewModel(withDevice: dev)
-		}
-		if devices.count > 0 {
+		if let dev = devices.first {
+			// Set the DeviceViewModel on each tab
+			if deviceViewModel == nil {
+				deviceViewModel = DeviceViewModel(withDevice: dev)
+				// They will share the same instance
+				for var tab in tabs {
+					tab.deviceViewModel = deviceViewModel
+				}
+			}
+			
 			deviceListDidChoose(deviceList)
 		}
 	}

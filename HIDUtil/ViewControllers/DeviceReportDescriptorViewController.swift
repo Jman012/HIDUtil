@@ -8,12 +8,12 @@
 
 import Cocoa
 
-class DeviceInfoViewController: NSViewController {
+class DeviceReportDescriptorViewController: NSViewController, DeviceViewModelable {
 	@IBOutlet weak var rawDescriptorLabel: NSTextField!
 	
-	var deviceInfo: DeviceViewModel? {
+	var deviceViewModel: DeviceViewModel? {
 		didSet {
-			deviceInfo?.reportDescriptor.bindAndFire(listener: { [weak self] (reportDescriptor) in
+			deviceViewModel?.reportDescriptor.bindAndFire(listener: { [weak self] (reportDescriptor) in
 				self?.rawDescriptorLabel.stringValue = reportDescriptor.map { String(format: "%02x ", $0) }.joined()
 			})
 		}
