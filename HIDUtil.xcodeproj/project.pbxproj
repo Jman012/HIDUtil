@@ -17,6 +17,8 @@
 		1A030652217D97F3001F06D7 /* DeviceManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03064D217D97F3001F06D7 /* DeviceManagerViewModel.swift */; };
 		1A030653217D97F3001F06D7 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03064E217D97F3001F06D7 /* DeviceViewModel.swift */; };
 		1A03066821804102001F06D7 /* DeviceReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03066721804102001F06D7 /* DeviceReportsViewController.swift */; };
+		1A03066A218194B5001F06D7 /* DispatchSemaphore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A030669218194B5001F06D7 /* DispatchSemaphore+Extensions.swift */; };
+		1A03066C2182F164001F06D7 /* OutlineViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03066B2182F164001F06D7 /* OutlineViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		1A03064D217D97F3001F06D7 /* DeviceManagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManagerViewModel.swift; sourceTree = "<group>"; };
 		1A03064E217D97F3001F06D7 /* DeviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewModel.swift; sourceTree = "<group>"; };
 		1A03066721804102001F06D7 /* DeviceReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceReportsViewController.swift; sourceTree = "<group>"; };
+		1A030669218194B5001F06D7 /* DispatchSemaphore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchSemaphore+Extensions.swift"; sourceTree = "<group>"; };
+		1A03066B2182F164001F06D7 /* OutlineViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				1A030648217D97F3001F06D7 /* Dynamic.swift */,
+				1A030669218194B5001F06D7 /* DispatchSemaphore+Extensions.swift */,
+				1A03066B2182F164001F06D7 /* OutlineViewRow.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -193,6 +199,8 @@
 				1A030653217D97F3001F06D7 /* DeviceViewModel.swift in Sources */,
 				1A030651217D97F3001F06D7 /* DeviceReportDescriptorViewController.swift in Sources */,
 				1A030650217D97F3001F06D7 /* DeviceManagerViewController.swift in Sources */,
+				1A03066C2182F164001F06D7 /* OutlineViewRow.swift in Sources */,
+				1A03066A218194B5001F06D7 /* DispatchSemaphore+Extensions.swift in Sources */,
 				1A030621217D871C001F06D7 /* AppDelegate.swift in Sources */,
 				1A03064F217D97F3001F06D7 /* Dynamic.swift in Sources */,
 				1A030652217D97F3001F06D7 /* DeviceManagerViewModel.swift in Sources */,

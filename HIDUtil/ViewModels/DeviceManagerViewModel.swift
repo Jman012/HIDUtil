@@ -28,13 +28,6 @@ class DeviceManagerViewModel {
 			self.devices.value.append(device)
 			self.devices.fire()
 			print("\(device.product as Any), \(device.locationID as Any), \(device.vendorID as Any), \(device.productID as Any), \(device.maxInputReportSize as Any)")
-			
-			device.register(inputReportCallback: { (result, device, reportType, reportId, report) in
-				print(result, device.product as Any, reportType, reportId, report)
-			})
-			device.register(inputValueCallback: { (result, queue, value) in
-				print(result, queue, value)
-			})
 		})
 		
 		manager.register(removalCallback: { (result, manager, device) in
