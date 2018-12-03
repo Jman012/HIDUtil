@@ -20,11 +20,10 @@ class DeviceReportsViewController: NSViewController, DeviceViewModelable {
 		didSet {
 			deviceViewModel?.deviceReports.bindAndFire(listener: { [weak self] (reports) in
 				guard let self = self else { return }
-//				self.outlineView.beginUpdates()
+				
 				self.deviceReports = reports
 				self.deviceReportRows = reports.map { OutlineViewRow(deviceReport: $0) }
 				self.outlineView.reloadData()
-//				self.outlineView.endUpdates()
 			})
 		}
 	}
@@ -39,6 +38,8 @@ class DeviceReportsViewController: NSViewController, DeviceViewModelable {
 }
 
 extension DeviceReportsViewController: NSOutlineViewDataSource {
+	
+	// MARK: NSOutlineViewDataSource Implementation
 	
 	public func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
 		if item == nil {
@@ -71,6 +72,9 @@ extension DeviceReportsViewController: NSOutlineViewDataSource {
 }
 
 extension DeviceReportsViewController: NSOutlineViewDelegate {
+	
+	// MARK: NSOutlineViewDelegate Implementation
+	
 	public func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
 		if tableColumn?.identifier.rawValue == "Name" {
 			let view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("DeviceReportCellName"), owner: self) as? NSTableCellView
@@ -100,7 +104,10 @@ extension DeviceReportsViewController: NSOutlineViewDelegate {
 	}
 }
 
-extension OutlineViewRow {
+fileprivate extension OutlineViewRow {
+	
+	// MARK: Custom OutlineViewRow overrides
+	
 	convenience init(deviceReport: DeviceReport) {
 		self.init(key: "HID Report", value: nil, children: [
 			OutlineViewRow(key: "Timestamp", value: deviceReport.timestamp, children: []),

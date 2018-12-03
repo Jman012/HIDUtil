@@ -19,10 +19,7 @@ class DeviceManagerViewModel {
 		
 		manager.setDeviceMatching(multiple: [
 			[:]
-//			[.exact(.usagePage): kHIDPage_GenericDesktop, .exact(.usage): kHIDUsage_GD_Joystick],
-//			[.exact(.usagePage): kHIDPage_GenericDesktop, .exact(.usage): kHIDUsage_GD_GamePad],
-//			[.exact(.usagePage): kHIDPage_GenericDesktop, .exact(.usage): kHIDUsage_GD_MultiAxisController],
-			])
+		])
 		
 		manager.register(matchingCallback:  { (result, sender, device) in
 			self.devices.value.append(device)
