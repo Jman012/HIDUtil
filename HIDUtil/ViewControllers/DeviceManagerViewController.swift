@@ -31,6 +31,7 @@ class DeviceManagerViewController: NSViewController {
 	
 	var deviceViewModel: DeviceViewModel?
 	var tabs: [DeviceViewModelable] = []
+	var deviceInfoVC: DeviceInfoViewController?
 	var deviceReportDescriptorVC: DeviceReportDescriptorViewController?
 	var deviceReportsVC: DeviceReportsViewController?
 
@@ -43,6 +44,10 @@ class DeviceManagerViewController: NSViewController {
 	override func viewDidAppear() {
 		super.viewDidAppear()
 		
+		if let vc = children.first(where: { $0 is DeviceInfoViewController }) as? DeviceInfoViewController {
+			deviceInfoVC = vc
+			tabs.append(vc)
+		}
 		if let vc = children.first(where: { $0 is DeviceReportDescriptorViewController }) as? DeviceReportDescriptorViewController {
 			deviceReportDescriptorVC = vc
 			tabs.append(vc)

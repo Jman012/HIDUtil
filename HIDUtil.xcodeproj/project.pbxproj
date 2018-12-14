@@ -22,6 +22,7 @@
 		1A87F39A21990AD500F1F97C /* SwiftyHID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A87F39921990AD500F1F97C /* SwiftyHID.framework */; };
 		1A87F3A3219D4E4A00F1F97C /* Int+HIDUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A87F3A2219D4E4A00F1F97C /* Int+HIDUtil.swift */; };
 		1A87F3A721B369E100F1F97C /* Collection+HIDUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A87F3A621B369E100F1F97C /* Collection+HIDUtil.swift */; };
+		1A87F3A921BCE15800F1F97C /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A87F3A821BCE15800F1F97C /* DeviceInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		1A87F39921990AD500F1F97C /* SwiftyHID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyHID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A87F3A2219D4E4A00F1F97C /* Int+HIDUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+HIDUtil.swift"; sourceTree = "<group>"; };
 		1A87F3A621B369E100F1F97C /* Collection+HIDUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+HIDUtil.swift"; sourceTree = "<group>"; };
+		1A87F3A821BCE15800F1F97C /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				1A03064A217D97F3001F06D7 /* DeviceManagerViewController.swift */,
 				1A03064B217D97F3001F06D7 /* DeviceReportDescriptorViewController.swift */,
 				1A03066721804102001F06D7 /* DeviceReportsViewController.swift */,
+				1A87F3A821BCE15800F1F97C /* DeviceInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				1A030650217D97F3001F06D7 /* DeviceManagerViewController.swift in Sources */,
 				1A03066C2182F164001F06D7 /* OutlineViewRow.swift in Sources */,
 				1A03066A218194B5001F06D7 /* DispatchSemaphore+Extensions.swift in Sources */,
+				1A87F3A921BCE15800F1F97C /* DeviceInfoViewController.swift in Sources */,
 				1A030621217D871C001F06D7 /* AppDelegate.swift in Sources */,
 				1A030CE52187FF18001F06D7 /* Data+HIDUtil.swift in Sources */,
 				1A03064F217D97F3001F06D7 /* Dynamic.swift in Sources */,
