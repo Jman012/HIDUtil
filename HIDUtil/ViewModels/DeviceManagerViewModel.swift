@@ -1,6 +1,6 @@
 //
 //  DeviceManagerViewModel.swift
-//  JoyConManager
+//  HIDUtil
 //
 //  Created by James Linnell on 10/21/18.
 //  Copyright © 2018 James Linnell. All rights reserved.
