@@ -830,7 +830,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="W7y-oZ-tIM">
-                                <rect key="frame" x="-2" y="25" width="454" height="17"/>
+                                <rect key="frame" x="-2" y="26" width="454" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Raw Report Descriptor:" id="vAL-w4-Cho">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -838,21 +838,21 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3w2-fv-ehz">
-                                <rect key="frame" x="-2" y="0.0" width="454" height="17"/>
+                                <rect key="frame" x="-2" y="0.0" width="454" height="18"/>
                                 <textFieldCell key="cell" selectable="YES" title="00" id="xxl-Uu-UZq">
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" size="12" name="AndaleMono"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts8-BX-1Cu">
-                                <rect key="frame" x="0.0" y="50" width="450" height="250"/>
+                                <rect key="frame" x="0.0" y="51" width="450" height="249"/>
                                 <clipView key="contentView" id="EuC-wJ-FgG">
-                                    <rect key="frame" x="1" y="0.0" width="448" height="249"/>
+                                    <rect key="frame" x="1" y="0.0" width="448" height="248"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Kvc-Qs-1H3" viewBased="YES" id="KqX-T4-I9e">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="224"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>

@@ -64,7 +64,7 @@ extension DeviceInfoViewController: NSTableViewDelegate {
 		switch tableColumn.identifier {
 		case ColumnIdentifiers.KeyColumnID:
 			cellIdentifier = CellIdentifiers.KeyCellID
-			text = "\(hidDevicePropertyKey)"
+			text = hidDevicePropertyKey.key
 			
 		case ColumnIdentifiers.ValueColumnID:
 			cellIdentifier = CellIdentifiers.ValueCellID

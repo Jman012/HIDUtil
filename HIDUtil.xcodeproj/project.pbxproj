@@ -122,9 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				1A03064A217D97F3001F06D7 /* DeviceManagerViewController.swift */,
+				1A87F3A821BCE15800F1F97C /* DeviceInfoViewController.swift */,
 				1A03064B217D97F3001F06D7 /* DeviceReportDescriptorViewController.swift */,
 				1A03066721804102001F06D7 /* DeviceReportsViewController.swift */,
-				1A87F3A821BCE15800F1F97C /* DeviceInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
